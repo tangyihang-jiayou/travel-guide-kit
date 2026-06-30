@@ -29,5 +29,12 @@ config = config
   .replaceAll("旅行攻略模板", title);
 fs.writeFileSync(configPath, config);
 
+for (const htmlName of ["index.html", "vertical.html"]) {
+  const htmlPath = path.join(target, htmlName);
+  let html = fs.readFileSync(htmlPath, "utf8");
+  html = html.replaceAll("旅行攻略模板", title);
+  fs.writeFileSync(htmlPath, html);
+}
+
 console.log(`Created guides/${slug}`);
 console.log(`Next: add maps/photos/web assets and edit guides/${slug}/guide.config.js`);

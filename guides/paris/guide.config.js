@@ -6,6 +6,7 @@ window.TRAVEL_GUIDE = {
   meta: {
     title: "巴黎松弛 P 人闲逛指南",
     city: "Paris",
+    author: "唐一航-探索ing",
     authorBadge: "唐",
     description: "以地图为总览、以原图为主体的巴黎旅行攻略讲解稿。"
   },
@@ -75,8 +76,8 @@ window.TRAVEL_GUIDE = {
     { section: "41 / 攀岩", src: p(21), title: "教堂空间里的攀岩馆", text: "它不是巴黎必去，但很像你真的在这里生活了一小会儿。", note: "这是你的个人标签。", tag: "小众" },
     { section: "42 / 攀岩", src: p(11), title: "攀岩馆内部", text: "做一次平时也会做的事，比打卡更进入当地生活。", note: "不要说成通用推荐。", tag: "日常" },
     { section: "43 / 河边", src: e("river-boxing"), title: "河边有人训练", text: "不是景点，但非常城市。", note: "这页讲巴黎的体感。", tag: "日常" },
-    { section: "44 / 地铁", src: e("metro-card"), title: "地铁真的很挤", text: "巴黎不是远，是换乘和人流会慢慢偷走体力。", note: "作为节奏提醒，不要嘲讽人。", tag: "交通" },
-    { section: "45 / 地铁", src: p(14), title: "人贴着人", text: "这张点到为止，用来解释为什么一天不要排太满。", note: "讲体力消耗。", tag: "交通" },
+    { section: "44 / 地铁", src: e("metro-card"), title: "交通别排太满", text: "巴黎不是远，是换乘和人流会慢慢偷走体力。", note: "作为节奏提醒，不评价具体的人。", tag: "交通" },
+    { section: "45 / 地铁", src: p(14), title: "换乘会消耗体力", text: "这张点到为止，用来解释为什么一天不要排太满。", note: "讲节奏和体力，不讲人。", tag: "交通" },
     { section: "46 / 收束", src: e("eiffel-blue"), title: "最后回到这套节奏", text: "一馆、一街区、一傍晚。巴黎不是刷完的，是慢慢进入的。", note: "最后停一秒，让观众记住这句。", tag: "收束" }
   ]
 };

@@ -9,6 +9,7 @@
 ```text
 guides/paris/
   index.html
+  vertical.html
   guide.config.js
   assets/
     maps/
@@ -25,14 +26,23 @@ guides/paris/
 
 设计上让口播提示和视觉呈现分离：`text`、`note`、`tag` 可以保留给讲解者，但模板默认只显示短标题。
 
-## 2. 模板层：`templates/route-map-gallery/`
+## 2. 模板层：`templates/`
 
-模板层只处理共用视觉和交互：
+模板层只处理共用视觉和交互，内容仍然全部来自 `guide.config.js`。
+
+`templates/route-map-gallery/` 是地图 App 版：
 
 - `styles.css`: 9:16 竖屏画布、地图导航 UI、路线卡、照片适配
 - `app.js`: 读取 `window.TRAVEL_GUIDE`，渲染 slides，处理翻页和跳页
 
-模板不关心具体城市，也不写死巴黎路径。
+`templates/vertical-caption-gallery/` 是竖屏录制版：
+
+- `styles.css`: 原图/地图主视觉、小号提示区、轻地图纹理
+- `app.js`: 读取同一套 slides，按原图比例显示素材，自动适配横图/竖图/方图
+
+这版是内容画布，不仿任何平台 App 界面；模板不会在原图上叠加标题条或评论。
+
+模板不关心具体城市，也不写死巴黎路径。一个地点可以同时拥有多个 HTML 入口，共用同一份内容数据。
 
 ## 3. 工具层：`scripts/`
 

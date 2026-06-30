@@ -24,11 +24,18 @@
 guides/paris/index.html
 ```
 
+更适合竖屏录制、底部留字幕的版本：
+
+```text
+guides/paris/vertical.html
+```
+
 跳到指定页：
 
 ```text
 guides/paris/index.html?slide=20
 guides/paris/index.html#20
+guides/paris/vertical.html?slide=20
 ```
 
 翻页方式：
@@ -78,11 +85,15 @@ travel-guide-kit/
         photos/             # 原图、旅行照片
         web/                # 网页截图、资料截图
       guide.config.js       # 页面顺序、标题、口播提示、素材引用
-      index.html            # 打开这个录制
+      index.html            # 地图 App 版
+      vertical.html         # 竖屏录制版，图片为主，不带平台 UI
   templates/
     route-map-gallery/
       app.js                # 通用翻页和渲染逻辑
       styles.css            # 通用地图 App 风格视觉
+    vertical-caption-gallery/
+      app.js                # 竖屏录制版渲染逻辑
+      styles.css            # 原图内容区 + 小号提示区
   docs/
     ARCHITECTURE.md
     CONTENT_GUIDE.md
@@ -97,9 +108,9 @@ travel-guide-kit/
 
 ```js
 {
-  section: "03 / 铁塔",
+  section: "03 / 第一站",
   src: "photos/image-1.jpg",
-  title: "铁塔留给傍晚",
+  title: "这一站留给傍晚",
   text: "这段是给自己看的口播提示，默认不会显示。"
 }
 ```
