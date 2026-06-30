@@ -1,0 +1,62 @@
+# Architecture
+
+这套仓库分成三层：内容层、模板层、工具层。
+
+## 1. 内容层：`guides/<slug>/`
+
+每个地点一套独立内容：
+
+```text
+guides/paris/
+  index.html
+  guide.config.js
+  assets/
+    maps/
+    photos/
+    web/
+```
+
+`guide.config.js` 是唯一需要频繁编辑的文件。它定义：
+
+- `meta`: 城市、标题、作者标识
+- `assetsBase`: 素材根目录
+- `sources`: 网页来源、参考资料
+- `slides`: 页面顺序、图片路径、页签标题、口播提示
+
+设计上让口播提示和视觉呈现分离：`text`、`note`、`tag` 可以保留给讲解者，但模板默认只显示短标题。
+
+## 2. 模板层：`templates/route-map-gallery/`
+
+模板层只处理共用视觉和交互：
+
+- `styles.css`: 9:16 竖屏画布、地图导航 UI、路线卡、照片适配
+- `app.js`: 读取 `window.TRAVEL_GUIDE`，渲染 slides，处理翻页和跳页
+
+模板不关心具体城市，也不写死巴黎路径。
+
+## 3. 工具层：`scripts/`
+
+- `new-guide.mjs`: 从 `_template` 复制新地点目录
+- `check-guide.mjs`: 检查配置、素材路径、基础字段
+
+工具层无第三方依赖，方便在任何机器上直接运行。
+
+## 4. 素材策略
+
+建议每个地点只提交真正使用的素材：
+
+- 地图：JPG/PNG，尽量 9:16 或接近竖屏可读
+- 照片：保留原图比例，模板不强裁
+- 网页：保存截图到 `assets/web/`，原链接放到 `sources`
+
+如果后续素材特别大，再考虑 Git LFS；目前巴黎示例不需要。
+
+## 5. 发布策略
+
+仓库可以公开。后续如需网页访问，可打开 GitHub Pages：
+
+- Source: `main`
+- Folder: `/`
+- 巴黎页面路径：`/guides/paris/`
+
+录制时仍建议本地打开 HTML，速度更稳。

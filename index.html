@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Guide Kit</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        background: #eef3e8;
+        color: #25221d;
+        font-family: "Avenir Next", "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif;
+      }
+
+      main {
+        width: min(680px, calc(100vw - 40px));
+        display: grid;
+        gap: 18px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 38px;
+        line-height: 1.05;
+      }
+
+      p {
+        margin: 0;
+        color: rgba(37, 34, 29, 0.68);
+        font-size: 17px;
+        line-height: 1.6;
+      }
+
+      a {
+        width: fit-content;
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 18px;
+        border-radius: 999px;
+        background: #147eea;
+        color: white;
+        font-weight: 800;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Travel Guide Kit</h1>
+      <p>地图先行、图片为主的竖屏旅行攻略模板。当前示例是巴黎。</p>
+      <a href="./guides/paris/">打开巴黎示例</a>
+    </main>
+  </body>
+</html>

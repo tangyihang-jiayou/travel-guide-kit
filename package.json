@@ -1,0 +1,11 @@
+{
+  "name": "travel-guide-kit",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check-guide.mjs",
+    "check:paris": "node scripts/check-guide.mjs guides/paris",
+    "new": "node scripts/new-guide.mjs"
+  }
+}
