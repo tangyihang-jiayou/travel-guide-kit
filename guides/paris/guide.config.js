@@ -81,3 +81,57 @@ window.TRAVEL_GUIDE = {
     { section: "46 / 收束", src: e("eiffel-blue"), title: "最后回到这套节奏", text: "一馆、一街区、一傍晚。巴黎不是刷完的，是慢慢进入的。", note: "最后停一秒，让观众记住这句。", tag: "收束" }
   ]
 };
+
+const stickerPlan = {
+  3: { prop: "tower", mood: "wonder", pose: "point", accent: "#f1b447", x: 79, y: 67, size: 18, rotate: -7 },
+  4: { prop: "river", mood: "calm", pose: "look", accent: "#2f7ed8", x: 22, y: 74, size: 16, rotate: 7 },
+  5: { prop: "cafe", mood: "smile", pose: "hold", accent: "#df6247", x: 80, y: 34, size: 16, rotate: 6 },
+  6: { prop: "lamp", mood: "spark", pose: "wave", accent: "#f1b447", x: 20, y: 36, size: 16, rotate: -6 },
+  7: { prop: "facade", mood: "focus", pose: "look", accent: "#8b73d9", x: 74, y: 57, size: 17, rotate: 9 },
+  8: { prop: "shop", mood: "smile", pose: "lean", accent: "#4c9f70", x: 24, y: 59, size: 16, rotate: -10 },
+  9: { prop: "letters", mood: "focus", pose: "point", accent: "#2f7ed8", x: 80, y: 82, size: 15, rotate: -4 },
+  10: { prop: "dome", mood: "wonder", pose: "point", accent: "#f1b447", x: 18, y: 82, size: 16, rotate: 6 },
+  11: { prop: "tomb", mood: "calm", pose: "hold", accent: "#d4a15d", x: 76, y: 71, size: 17, rotate: -8 },
+  12: { prop: "poster", mood: "focus", pose: "look", accent: "#df6247", x: 23, y: 70, size: 16, rotate: 8 },
+  13: { prop: "poster", mood: "focus", pose: "point", accent: "#2f7ed8", x: 80, y: 35, size: 16, rotate: -7 },
+  14: { prop: "gallery", mood: "wonder", pose: "lean", accent: "#8b73d9", x: 22, y: 32, size: 17, rotate: 6 },
+  15: { prop: "poster", mood: "tired", pose: "hold", accent: "#d54b61", x: 77, y: 82, size: 15, rotate: -5 },
+  16: { prop: "gallery", mood: "calm", pose: "look", accent: "#4c9f70", x: 18, y: 78, size: 16, rotate: 8 },
+  17: { prop: "gallery", mood: "spark", pose: "point", accent: "#f1b447", x: 80, y: 32, size: 16, rotate: -9 },
+  18: { prop: "gallery", mood: "calm", pose: "lean", accent: "#8b73d9", x: 25, y: 54, size: 16, rotate: 10 },
+  19: { prop: "people", mood: "smile", pose: "look", accent: "#df6247", x: 79, y: 60, size: 16, rotate: -7 },
+  20: { prop: "rain", mood: "tired", pose: "walk", accent: "#2f7ed8", x: 76, y: 70, size: 17, rotate: 6 },
+  21: { prop: "candle", mood: "calm", pose: "hold", accent: "#f1b447", x: 23, y: 72, size: 17, rotate: -6 },
+  22: { prop: "tomb", mood: "calm", pose: "look", accent: "#8b73d9", x: 79, y: 35, size: 16, rotate: 8 },
+  23: { prop: "tomb", mood: "focus", pose: "lean", accent: "#4c9f70", x: 20, y: 35, size: 16, rotate: -8 },
+  24: { prop: "tomb", mood: "wonder", pose: "point", accent: "#d4a15d", x: 77, y: 82, size: 15, rotate: 5 },
+  25: { prop: "route", mood: "calm", pose: "hold", accent: "#2f7ed8", x: 21, y: 83, size: 15, rotate: -6 },
+  26: { prop: "home", mood: "smile", pose: "hold", accent: "#4c9f70", x: 77, y: 37, size: 17, rotate: 8 },
+  27: { prop: "home", mood: "calm", pose: "lean", accent: "#f1b447", x: 20, y: 66, size: 16, rotate: -9 },
+  28: { prop: "flower", mood: "spark", pose: "wave", accent: "#d54b61", x: 78, y: 73, size: 18, rotate: -7 },
+  29: { prop: "spray", mood: "focus", pose: "point", accent: "#2f7ed8", x: 23, y: 72, size: 16, rotate: 7 },
+  30: { prop: "shop", mood: "smile", pose: "look", accent: "#4c9f70", x: 80, y: 31, size: 16, rotate: 5 },
+  31: { prop: "bread", mood: "wonder", pose: "hold", accent: "#d99b45", x: 20, y: 36, size: 17, rotate: -6 },
+  32: { prop: "market", mood: "spark", pose: "walk", accent: "#4c9f70", x: 74, y: 58, size: 16, rotate: 9 },
+  33: { prop: "pan", mood: "smile", pose: "hold", accent: "#df6247", x: 28, y: 58, size: 17, rotate: -10 },
+  34: { prop: "dessert", mood: "spark", pose: "lean", accent: "#f1b447", x: 82, y: 83, size: 15, rotate: -4 },
+  35: { prop: "plate", mood: "calm", pose: "hold", accent: "#df6247", x: 18, y: 84, size: 15, rotate: 6 },
+  36: { prop: "plate", mood: "smile", pose: "point", accent: "#4c9f70", x: 78, y: 68, size: 16, rotate: -7 },
+  37: { prop: "bag", mood: "smile", pose: "walk", accent: "#f1b447", x: 23, y: 66, size: 16, rotate: 8 },
+  38: { prop: "market", mood: "focus", pose: "look", accent: "#2f7ed8", x: 80, y: 36, size: 16, rotate: -8 },
+  39: { prop: "cafe", mood: "smile", pose: "lean", accent: "#df6247", x: 22, y: 82, size: 15, rotate: 7 },
+  40: { prop: "plate", mood: "wonder", pose: "hold", accent: "#d99b45", x: 79, y: 78, size: 16, rotate: -5 },
+  41: { prop: "climb", mood: "spark", pose: "point", accent: "#2f7ed8", x: 21, y: 36, size: 18, rotate: -8 },
+  42: { prop: "climb", mood: "focus", pose: "lean", accent: "#4c9f70", x: 78, y: 72, size: 17, rotate: 7 },
+  43: { prop: "boxing", mood: "wonder", pose: "point", accent: "#df6247", x: 24, y: 72, size: 17, rotate: -8 },
+  44: { prop: "metro", mood: "tired", pose: "walk", accent: "#2f7ed8", x: 94, y: 88, size: 13, rotate: 6 },
+  45: { prop: "metro", mood: "tired", pose: "look", accent: "#f1b447", x: 18, y: 78, size: 15, rotate: -6 },
+  46: { prop: "route", mood: "calm", pose: "wave", accent: "#2f7ed8", x: 78, y: 74, size: 17, rotate: 7 }
+};
+
+window.TRAVEL_GUIDE.slides.forEach((slide, index) => {
+  const page = index + 1;
+  if (slide.kind !== "map") {
+    slide.sticker = stickerPlan[page] || slide.sticker;
+  }
+});

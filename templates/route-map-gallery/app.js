@@ -23,7 +23,7 @@
   function asset(src) {
     if (!src) return "";
     if (/^(https?:|data:|file:|\/)/.test(src)) return src;
-    return `${assetsBase}${src}`;
+    return new URL(`${assetsBase}${src}`, window.location.href).href;
   }
 
   function pad(number) {

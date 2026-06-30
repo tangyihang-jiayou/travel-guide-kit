@@ -28,7 +28,17 @@ window.TRAVEL_GUIDE = {
       src: "photos/image-1.jpg",
       title: "这里写短标题",
       text: "口播提示只写给自己看，不会默认显示在画面上。",
-      tag: "现场"
+      tag: "现场",
+      sticker: {
+        prop: "cafe",
+        mood: "smile",
+        pose: "hold",
+        accent: "#df6247",
+        x: 78,
+        y: 72,
+        size: 17,
+        rotate: -7
+      }
     }
   ]
 };

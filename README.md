@@ -6,6 +6,7 @@
 
 - 地图先行：每套攻略先用地图建立路线框架。
 - 图片为主：一页一张原图，文字只做录制时的轻提示。
+- 贴纸辅助：照片页可以放透明唐小蓝贴纸，强调照片主体，但不改原图、不盖大段评论。
 - 本地可用：不用构建工具，直接打开每个 guide 的 `index.html` 即可录制。
 - 可复用：后续新增城市时复制 `guides/_template`，替换素材和 `guide.config.js`。
 
@@ -111,7 +112,17 @@ travel-guide-kit/
   section: "03 / 第一站",
   src: "photos/image-1.jpg",
   title: "这一站留给傍晚",
-  text: "这段是给自己看的口播提示，默认不会显示。"
+  text: "这段是给自己看的口播提示，默认不会显示。",
+  sticker: {
+    prop: "cafe",
+    mood: "smile",
+    pose: "hold",
+    accent: "#df6247",
+    x: 78,
+    y: 72,
+    size: 17,
+    rotate: -7
+  }
 }
 ```
 
@@ -120,5 +131,13 @@ travel-guide-kit/
 ```js
 kind: "map"
 ```
+
+地图页默认不显示贴纸。`sticker` 只影响竖屏录制版，字段含义：
+
+- `prop`: 道具主题，例如 `tower`、`cafe`、`bread`、`metro`、`climb`
+- `mood` / `pose`: 小人的表情和动作
+- `accent`: 道具强调色
+- `x` / `y`: 在画面展示区里的位置百分比
+- `size` / `rotate`: 贴纸大小和旋转角度
 
 网页资料建议先保存截图，放到 `assets/web/`，再在 `sources` 里保留原链接。
