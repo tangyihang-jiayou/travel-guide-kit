@@ -320,6 +320,13 @@
     const rotate = Number.isFinite(Number(sticker.rotate)) ? Number(sticker.rotate) : -6;
     const style = `--sticker-x:${x}%; --sticker-y:${y}%; --sticker-size:${size}cqw; --sticker-rotate:${rotate}deg;`;
 
+    if (sticker.src) {
+      const label = escapeHtml(`${slide.title || "唐小蓝"}贴纸`);
+      return `
+        <img class="tang-sticker tang-sticker-image" src="${asset(sticker.src)}" alt="${label}" style="${style}" loading="lazy" decoding="async" />
+      `;
+    }
+
     return `
       <div class="tang-sticker" style="${style}">
         ${tangStickerSvg(sticker)}

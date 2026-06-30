@@ -253,6 +253,12 @@ button {
   overflow: visible;
 }
 
+.tang-sticker-image {
+  width: calc(var(--sticker-size) + 6cqw);
+  height: auto;
+  object-fit: contain;
+}
+
 .sticker-cutout {
   fill: rgba(255, 252, 246, 0.96);
   stroke: rgba(255, 255, 255, 0.98);

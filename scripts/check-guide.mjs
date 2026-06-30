@@ -55,6 +55,12 @@ guide.slides?.forEach((slide, index) => {
     console.error(`${label}: missing asset ${path.relative(root, assetPath)}`);
     missingAssets += 1;
   }
+
+  const stickerPath = resolveAsset(guide.assetsBase, slide.sticker?.src);
+  if (stickerPath && !fs.existsSync(stickerPath)) {
+    console.error(`${label}: missing sticker ${path.relative(root, stickerPath)}`);
+    missingAssets += 1;
+  }
 });
 
 if (missingFields || missingAssets) {

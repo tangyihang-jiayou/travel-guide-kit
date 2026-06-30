@@ -114,6 +114,7 @@ travel-guide-kit/
   title: "这一站留给傍晚",
   text: "这段是给自己看的口播提示，默认不会显示。",
   sticker: {
+    src: "stickers/your-sticker.png",
     prop: "cafe",
     mood: "smile",
     pose: "hold",
@@ -134,6 +135,7 @@ kind: "map"
 
 地图页默认不显示贴纸。`sticker` 只影响竖屏录制版，字段含义：
 
+- `src`: 可选。透明 PNG 贴纸路径；填了就优先用这张图
 - `prop`: 道具主题，例如 `tower`、`cafe`、`bread`、`metro`、`climb`
 - `mood` / `pose`: 小人的表情和动作
 - `accent`: 道具强调色
