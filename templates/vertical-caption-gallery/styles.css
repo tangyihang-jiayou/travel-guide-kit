@@ -254,7 +254,7 @@ button {
 }
 
 .tang-sticker-image {
-  width: calc(var(--sticker-size) + 6cqw);
+  width: clamp(25cqw, calc(var(--sticker-size) + 12cqw), 38cqw);
   height: auto;
   object-fit: contain;
 }
@@ -271,7 +271,11 @@ button {
 }
 
 .media-shell.is-landscape + .tang-sticker {
-  width: min(var(--sticker-size), 16cqw);
+  width: clamp(26cqw, calc(var(--sticker-size) + 10cqw), 38cqw);
+}
+
+.media-shell.is-landscape + .tang-sticker-image {
+  width: clamp(28cqw, calc(var(--sticker-size) + 14cqw), 40cqw);
 }
 
 .map-slide .tang-sticker {
