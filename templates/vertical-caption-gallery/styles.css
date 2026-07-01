@@ -18,7 +18,7 @@ body {
   height: 100%;
   margin: 0;
   overflow: hidden;
-  background: #1b1a17;
+  background: var(--paper);
   color: var(--ink);
   font-family: "Avenir Next", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   letter-spacing: 0;
@@ -45,8 +45,8 @@ button {
   aspect-ratio: 9 / 16;
   overflow: hidden;
   background: var(--paper);
-  border-radius: clamp(0px, 1.8cqw, 16px);
-  box-shadow: 0 34px 100px rgba(0, 0, 0, 0.32);
+  border-radius: 0;
+  box-shadow: none;
   container-type: size;
 }
 
@@ -108,9 +108,9 @@ button {
 
 .page-meta {
   position: absolute;
-  top: 4.2cqw;
-  left: 4.4cqw;
-  right: 4.4cqw;
+  top: 3cqw;
+  left: 3.6cqw;
+  right: 3.6cqw;
   z-index: 8;
   display: flex;
   align-items: center;
@@ -124,11 +124,11 @@ button {
   display: inline-flex;
   align-items: center;
   min-height: 3.5cqw;
-  padding: 0 1.35cqw;
+  padding: 0 1.15cqw;
   border-radius: 999px;
   background: rgba(255, 250, 240, 0.76);
   color: rgba(37, 34, 28, 0.66);
-  font-size: 1.42cqw;
+  font-size: 1.28cqw;
   line-height: 1;
   font-weight: 850;
   box-shadow:
@@ -138,10 +138,10 @@ button {
 
 .visual-sheet {
   position: absolute;
-  top: 9.2cqw;
+  top: 6.4cqw;
   left: 0;
   right: 0;
-  height: 136cqw;
+  height: 166cqw;
   overflow: hidden;
 }
 
@@ -176,11 +176,11 @@ button {
 
 .media-shell {
   position: absolute;
-  left: 4cqw;
-  right: 4cqw;
-  top: 5cqw;
+  left: 3.2cqw;
+  right: 3.2cqw;
+  top: 3.6cqw;
   z-index: 4;
-  height: 124cqw;
+  height: 152cqw;
   margin: 0;
   display: grid;
   place-items: center;
@@ -220,15 +220,15 @@ button {
 }
 
 .media-shell.is-landscape {
-  top: 36cqw;
-  height: 54cqw;
+  top: 35cqw;
+  height: 62cqw;
 }
 
 .media-shell.is-square {
-  left: 8cqw;
-  right: 8cqw;
-  top: 14cqw;
-  height: 92cqw;
+  left: 5cqw;
+  right: 5cqw;
+  top: 13cqw;
+  height: 104cqw;
 }
 
 .tang-sticker {
@@ -283,8 +283,8 @@ button {
 }
 
 .map-slide .media-shell {
-  top: 3cqw;
-  height: 128cqw;
+  top: 2.4cqw;
+  height: 160cqw;
   border-radius: 2.6cqw;
 }
 
@@ -293,15 +293,7 @@ button {
 }
 
 .note-panel {
-  position: absolute;
-  left: 4.8cqw;
-  right: 4.8cqw;
-  bottom: 8.2cqw;
-  z-index: 7;
-  min-height: 17cqw;
-  padding-top: 2.4cqw;
-  border-top: 1px solid rgba(37, 34, 28, 0.12);
-  pointer-events: none;
+  display: none;
 }
 
 .note-tag,
@@ -362,9 +354,9 @@ button {
 
 .rec-ui {
   position: absolute;
-  left: 4.8cqw;
-  right: 4.8cqw;
-  bottom: 28.2cqw;
+  left: 5.2cqw;
+  right: 5.2cqw;
+  bottom: 2.8cqw;
   z-index: 9;
   display: flex;
   gap: 0.45cqw;
