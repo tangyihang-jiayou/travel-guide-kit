@@ -2,14 +2,14 @@ window.TRAVEL_GUIDE = {
   meta: {
     title: "城市名｜旅行攻略",
     city: "城市名",
-    author: "旅行者",
-    authorBadge: "旅",
+    author: "唐一航-探索ing",
+    authorBadge: "唐",
     description: "一套以地图和原图为主的竖屏讲解稿。"
   },
   assetsBase: "./assets/",
   ui: {
     statusTime: "9:41",
-    authorBadge: "旅"
+    authorBadge: "唐"
   },
   sources: [
     // { title: "参考网页标题", url: "https://example.com", note: "为什么放进攻略" }

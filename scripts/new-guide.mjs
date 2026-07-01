@@ -3,9 +3,10 @@ import path from "node:path";
 
 const slug = process.argv[2];
 const title = process.argv[3] || "新的旅行攻略";
+const cityName = process.argv[4] || slug;
 
 if (!slug || !/^[a-z0-9-]+$/.test(slug)) {
-  console.error("Usage: npm run new -- city-slug \"攻略标题\"");
+  console.error("Usage: npm run new -- city-slug \"攻略标题\" \"城市显示名\"");
   console.error("Slug can contain lowercase letters, numbers, and hyphens.");
   process.exit(1);
 }
@@ -25,7 +26,7 @@ const configPath = path.join(target, "guide.config.js");
 let config = fs.readFileSync(configPath, "utf8");
 config = config
   .replaceAll("城市名｜旅行攻略", title)
-  .replaceAll("城市名", slug)
+  .replaceAll("城市名", cityName)
   .replaceAll("旅行攻略模板", title);
 fs.writeFileSync(configPath, config);
 
@@ -37,4 +38,6 @@ for (const htmlName of ["index.html", "vertical.html"]) {
 }
 
 console.log(`Created guides/${slug}`);
-console.log(`Next: add maps/photos/web assets and edit guides/${slug}/guide.config.js`);
+console.log(`Title: ${title}`);
+console.log(`City: ${cityName}`);
+console.log(`Next: add maps/photos/web/stickers assets and edit guides/${slug}/guide.config.js`);

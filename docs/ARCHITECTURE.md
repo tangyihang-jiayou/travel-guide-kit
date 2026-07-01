@@ -14,6 +14,7 @@ guides/paris/
   assets/
     maps/
     photos/
+    stickers/
     web/
 ```
 
@@ -44,6 +45,16 @@ guides/paris/
 
 模板不关心具体城市，也不写死巴黎路径。一个地点可以同时拥有多个 HTML 入口，共用同一份内容数据。
 
+### 城市兼容约定
+
+路径和显示名分开：
+
+- `slug`: 英文路径，例如 `istanbul`、`tokyo-2026`，只用于文件夹和 URL。
+- `meta.city`: 画面和口播里的城市显示名，例如 `伊斯坦布尔`。
+- `meta.title`: 这套攻略的完整标题，例如 `伊斯坦布尔松弛闲逛指南`。
+
+新增城市时不要把标题、城市名、文件夹名混在一起。这样公开仓库、GitHub Pages、本地录制都稳定。
+
 ## 3. 工具层：`scripts/`
 
 - `new-guide.mjs`: 从 `_template` 复制新地点目录
@@ -58,8 +69,26 @@ guides/paris/
 - 地图：JPG/PNG，尽量 9:16 或接近竖屏可读
 - 照片：保留原图比例，模板不强裁
 - 网页：保存截图到 `assets/web/`，原链接放到 `sources`
+- 贴纸：透明 PNG 放在 `assets/stickers/`，尽量不写大字，不覆盖原图主体
 
 如果后续素材特别大，再考虑 Git LFS；目前巴黎示例不需要。
+
+贴纸目录建议：
+
+```text
+assets/stickers/
+  reusable/          # 跨城市复用的小人动作：指路、拿地图、避坑、喝咖啡
+  custom/
+    raw/             # 本城市生成原始图
+    final/           # 最终透明贴纸，供 guide.config.js 引用
+```
+
+模板兼容两种贴纸：
+
+- `sticker.src` 有值：使用透明 PNG。适合最终录制。
+- `sticker.src` 为空：根据 `prop`、`mood`、`pose` 生成轻量 SVG。适合早期草稿。
+
+因此伊斯坦布尔可以先用 SVG 快速排版，等内容顺序稳定后再替换为透明 PNG。
 
 ## 5. 发布策略
 

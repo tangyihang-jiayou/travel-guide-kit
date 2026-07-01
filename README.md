@@ -49,22 +49,29 @@ guides/paris/vertical.html?slide=20
 ## 新建一套攻略
 
 ```bash
-npm run new -- kyoto "京都松弛散步指南"
+npm run new -- istanbul "伊斯坦布尔松弛闲逛指南" "伊斯坦布尔"
 ```
 
 然后把素材放进：
 
 ```text
-guides/kyoto/assets/maps/
-guides/kyoto/assets/photos/
-guides/kyoto/assets/web/
+guides/istanbul/assets/maps/
+guides/istanbul/assets/photos/
+guides/istanbul/assets/web/
+guides/istanbul/assets/stickers/
 ```
 
 最后编辑：
 
 ```text
-guides/kyoto/guide.config.js
+guides/istanbul/guide.config.js
 ```
+
+命令参数含义：
+
+- `istanbul`: 文件夹 slug，用英文小写和连字符，方便 GitHub Pages 路径稳定。
+- `"伊斯坦布尔松弛闲逛指南"`: 页面标题。
+- `"伊斯坦布尔"`: 页面里显示的城市名。省略时会退回使用 slug。
 
 ## 检查内容
 
@@ -85,6 +92,7 @@ travel-guide-kit/
         maps/               # 地图、路线图、手写地图
         photos/             # 原图、旅行照片
         web/                # 网页截图、资料截图
+        stickers/            # 唐小蓝贴纸，按 reusable/custom 管理
       guide.config.js       # 页面顺序、标题、口播提示、素材引用
       index.html            # 地图 App 版
       vertical.html         # 竖屏录制版，图片为主，不带平台 UI
@@ -141,5 +149,15 @@ kind: "map"
 - `accent`: 道具强调色
 - `x` / `y`: 在画面展示区里的位置百分比
 - `size` / `rotate`: 贴纸大小和旋转角度
+
+贴纸素材建议分两层：
+
+```text
+assets/stickers/reusable/       # 可跨城市复用：指路、地图、避坑、喝咖啡、赶地铁
+assets/stickers/custom/raw/     # 本城市生成原稿
+assets/stickers/custom/final/   # 本城市最终透明 PNG
+```
+
+复用优先级建议：先用 `reusable` 的通用唐小蓝，再为每个城市补 6-12 张地标/场景定制贴纸。巴黎、伊斯坦布尔、东京都沿用同一套字段，不需要改模板。
 
 网页资料建议先保存截图，放到 `assets/web/`，再在 `sources` 里保留原链接。
