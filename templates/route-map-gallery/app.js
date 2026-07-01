@@ -30,6 +30,14 @@
     return String(number).padStart(2, "0");
   }
 
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
   function topbar(slide, index) {
     return `
       <header class="topbar">
@@ -46,7 +54,7 @@
         </div>
       </header>
       <div class="route-index">
-        <div class="pill">${slide.section}</div>
+        <div class="pill">${escapeHtml(slide.section)}</div>
         <div class="page">${pad(index + 1)} / ${pad(slides.length)}</div>
       </div>
     `;
@@ -55,8 +63,8 @@
   function footer(slide) {
     return `
       <footer class="footer">
-        <p class="note">${slide.note || ""}</p>
-        <div class="tag">${slide.tag || ""}</div>
+        <p class="note">${escapeHtml(slide.note || "")}</p>
+        <div class="tag">${escapeHtml(slide.tag || "")}</div>
       </footer>
     `;
   }
@@ -99,9 +107,9 @@
         ${topbar(slide, index)}
         <div class="media" data-bg="url('${src}')" style="${slide.position ? `--pos:${slide.position}` : ""}">
           ${routeLayer(index)}
-          <img class="${imageClass}" src="${src}" alt="${slide.title}" loading="${loading}" decoding="async" />
+          <img class="${imageClass}" src="${src}" alt="${escapeHtml(slide.title)}" loading="${loading}" decoding="async" />
           <div class="plate">
-            <b>${slide.title}</b>
+            <b>${escapeHtml(slide.title)}</b>
           </div>
         </div>
         ${routeCard(index)}
